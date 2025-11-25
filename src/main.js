@@ -1,24 +1,26 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const offersEl = document.querySelector("#offers");
+const offerYearlyBtn = offersEl.querySelector("#yearly");
+const offerWeeklyBtn = offersEl.querySelector("#weekly");
+const submitOfferBtn = document.querySelector("#submit-offer");
 
-setupCounter(document.querySelector('#counter'))
+offersEl.addEventListener("click", (e) => {
+  if (
+    e.target.closest("#weekly") &&
+    offerYearlyBtn.classList.contains("btn-active")
+  ) {
+    offerYearlyBtn.classList.remove("btn-active");
+    offerWeeklyBtn.classList.add("btn-active");
+    submitOfferBtn.setAttribute("href", "https://google.com/");
+  }
+
+  if (
+    e.target.closest("#yearly") &&
+    offerWeeklyBtn.classList.contains("btn-active")
+  ) {
+    offerYearlyBtn.classList.add("btn-active");
+    offerWeeklyBtn.classList.remove("btn-active");
+    submitOfferBtn.setAttribute("href", "https://apple.com/");
+  }
+});

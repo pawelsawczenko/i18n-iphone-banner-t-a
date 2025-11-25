@@ -1,13 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>i18n-banner-t-a</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>i18n banner PS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="banner-wrapper">
+      <img id="banner-background" src="/img/AI-Image.png" alt="ai-background" />
+
+      <div id="banner">
+        <div id="banner-background-gradient"></div>
+        <div id="banner-content">
+          <a id="close-button" href="#close-button"></a>
+          <div class="content">
+            <h1 id="headline" class="font-color-white">Get Unlimited Access</h1>
+
+            <div id="cards">
+              <div class="card-wrapper">
+                <img src="/img/card-bg1.jpg" alt="card-background-1" />
+
+                <div class="card">
+                  <div id="card-background-filter"></div>
+                  <p class="font-color-white">Unlimited Art Creation</p>
+                </div>
+              </div>
+              <div class="card-wrapper">
+                <img src="/img/card-bg2.jpg" alt="card-background-2" />
+
+                <div class="card">
+                  <p class="font-color-white">Exclusive Styles</p>
+                </div>
+              </div>
+              <div class="card-wrapper">
+                <img src="/img/card-bg3.jpg" alt="card-background-3" />
+
+                <div class="card">
+                  <p class="font-color-white">Magic Avatars With 20% Off</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="toolbar">
+              <div id="offers">
+                <button class="btn" id="yearly">
+                  <span class="btn-border-gradient-top"></span>
+
+                  <svg
+                    class="btn-border-gradient-left"
+                    width="26"
+                    height="29"
+                    viewBox="0 0 26 29"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.5619 28.2796C24.5619 14.0009 13.874 2.21856 0.0618591 0.496216"
+                      stroke="url(#paint0_linear_1_461)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_461"
+                        x1="-15.2343"
+                        y1="13.1775"
+                        x2="10.5619"
+                        y2="41.1775"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#01B4FF" />
+                        <stop
+                          offset="1"
+                          stop-color="#01B4FF"
+                          stop-opacity="0.01"
+                        />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <span id="best-offer" class="font-color-white"
+                    >best offer</span
+                  >
+
+                  <span class="uppercase font-color-white">Yearly access</span>
+
+                  <span class="price-per-year">Just $39.99 per year</span>
+
+                  <span class="price-per-week">$0.48 per week</span>
+                </button>
+
+                <button class="btn btn-active" id="weekly">
+                  <span class="uppercase">Weekly access</span>
+
+                  <span class="price-per-week">$6.99 per week</span>
+                </button>
+              </div>
+
+              <a
+                id="submit-offer"
+                class="btn"
+                href="https://google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Continue
+              </a>
+            </div>
+
+            <div id="links">
+              <a href="#terms-of-use">Terms of Use</a>
+              <a href="#privacy-policy">Privacy Policy</a>
+              <a href="#restore">Restore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
