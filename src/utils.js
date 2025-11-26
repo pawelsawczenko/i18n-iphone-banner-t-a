@@ -18,3 +18,9 @@ export const updateElementI18n = (element, textContent, lang) => {
   element.innerHTML = textContent;
   element.setAttribute("lang", lang);
 };
+
+export const setActiveOffer = (activeBtn, inactiveBtn, submitBtn, link) => {
+  inactiveBtn.classList.remove("btn-active");
+  activeBtn.classList.add("btn-active");
+  submitBtn.setAttribute("href", link);
+};

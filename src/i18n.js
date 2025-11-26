@@ -12,13 +12,12 @@ export function initI18n() {
     setUrlLanguage(urlLangParam, urlParams);
   }
 
-  document.documentElement.lang = urlParams.get("lang");
+  const lang = urlParams.get("lang");
+  document.documentElement.lang = lang;
 
-  fetch(`i18n/${urlParams.get("lang")}.json`)
+  fetch(`i18n/${lang}.json`)
     .then((response) => response.json())
     .then((data) => {
-      const lang = urlParams.get("lang");
-
       Object.entries(data).forEach(([key, value]) => {
         if (key === "{{price}} <br>per week") {
           const elements = document.querySelectorAll(

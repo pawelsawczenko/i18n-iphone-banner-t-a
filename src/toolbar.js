@@ -1,4 +1,5 @@
 import { TOOLBAR_LINKS } from "./constants";
+import { setActiveOffer } from "./utils";
 
 export const initToolbar = () => {
   const offersEl = document.querySelector("#offers");
@@ -11,18 +12,24 @@ export const initToolbar = () => {
       e.target.closest("#weekly") &&
       offerYearlyBtn.classList.contains("btn-active")
     ) {
-      offerYearlyBtn.classList.remove("btn-active");
-      offerWeeklyBtn.classList.add("btn-active");
-      submitOfferBtn.setAttribute("href", TOOLBAR_LINKS.WEEKLY_ACCESS);
+      setActiveOffer(
+        offerWeeklyBtn,
+        offerYearlyBtn,
+        submitOfferBtn,
+        TOOLBAR_LINKS.WEEKLY_ACCESS
+      );
     }
 
     if (
       e.target.closest("#yearly") &&
       offerWeeklyBtn.classList.contains("btn-active")
     ) {
-      offerYearlyBtn.classList.add("btn-active");
-      offerWeeklyBtn.classList.remove("btn-active");
-      submitOfferBtn.setAttribute("href", TOOLBAR_LINKS.YEARLY_ACCESS);
+      setActiveOffer(
+        offerYearlyBtn,
+        offerWeeklyBtn,
+        submitOfferBtn,
+        TOOLBAR_LINKS.YEARLY_ACCESS
+      );
     }
   });
 };
