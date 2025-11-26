@@ -117,6 +117,9 @@ body {
 #headline {
   margin-bottom: 1.5rem;
 
+  position: relative;
+  z-index: 3;
+
   font-size: 2.625rem;
   font-weight: 900;
   line-height: 2.875rem;
@@ -205,6 +208,9 @@ body {
   line-height: 0.875rem;
   letter-spacing: 0px;
   text-align: left;
+}
+.card p[lang="es"] {
+  width: 5.5rem;
 }
 .card p[lang="de"],
 .card p[lang="fr"] {
@@ -360,12 +366,14 @@ body {
   position: absolute;
   right: 3.25rem;
 }
-.btn .price-per-week[lang="es"],
-.btn .price-per-week[lang="pt"] {
+.btn .price-per-week[lang="es"] {
   right: 2.25rem;
 }
 .btn .price-per-week[lang="fr"] {
   right: 2.5rem;
+}
+.btn .price-per-week[lang="pt"] {
+  right: 2rem;
 }
 #submit-offer {
   padding: 1.125rem 0;
@@ -396,9 +404,8 @@ body {
   letter-spacing: 0px;
   text-decoration: underline;
 }
-#links a[lang="de"] {
-  font-size: 0.6875rem;
-}
+
+#links a[lang="de"],
 #links a[lang="fr"] {
   font-size: 0.625rem;
 }
