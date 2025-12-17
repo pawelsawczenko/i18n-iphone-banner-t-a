@@ -2,14 +2,14 @@ import { TOOLBAR_LINKS } from "./constants";
 import { setActiveOffer } from "./utils";
 
 export const initToolbar = () => {
-  const offersEl = document.querySelector("#offers");
-  const offerYearlyBtn = offersEl.querySelector("#yearly");
-  const offerWeeklyBtn = offersEl.querySelector("#weekly");
-  const submitOfferBtn = document.querySelector("#submit-offer");
+  const offersEl = document.querySelector(".offers");
+  const offerYearlyBtn = offersEl.querySelector(".yearly");
+  const offerWeeklyBtn = offersEl.querySelector(".weekly");
+  const submitOfferBtn = document.querySelector(".submit-offer");
 
   offersEl.addEventListener("click", (e) => {
     if (
-      e.target.closest("#weekly") &&
+      e.target.closest(".weekly") &&
       offerYearlyBtn.classList.contains("btn-active")
     ) {
       setActiveOffer(
@@ -21,7 +21,7 @@ export const initToolbar = () => {
     }
 
     if (
-      e.target.closest("#yearly") &&
+      e.target.closest(".yearly") &&
       offerWeeklyBtn.classList.contains("btn-active")
     ) {
       setActiveOffer(
